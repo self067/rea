@@ -59,5 +59,10 @@
 
 .content {
   grid-area: cont;
-  background-color: #61da3b;
+  background-color: #f17a3b;
+}
+
+.content img {
+  width: auto;
+  max-height: 50vh;
 }
