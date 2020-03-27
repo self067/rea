@@ -1,10 +1,10 @@
 import React from 'react';
-import './Header.css';
+import classes from './Header.module.css';
 
 function Header() {
   return (
-      <header className="header">
-        <img className="logo" src="https://theaosn.com/wp-content/uploads/Coyotes-Logo.png" alt="logo"/>
+      <header className={classes.header}>
+        <img className={classes.logo} src="https://theaosn.com/wp-content/uploads/Coyotes-Logo.png" alt="logo"/>
       </header>
   );
   }

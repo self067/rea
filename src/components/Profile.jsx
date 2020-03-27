@@ -1,9 +1,9 @@
 import React, { Profiler } from 'react';
-import './Profile.css';
+import classes from './Profile.module.css';
 
 function Profile() {
   return (
-    <div className="profile">
+    <div className={classes.profile}>
       My Posts
       <div>
         New post
@@ -16,13 +16,10 @@ function Profile() {
           post 2
         </div>
       </div>
- 
-
-    
+     
   </div>
-
 );
-  }
+}
 
   export default Profile;
 
