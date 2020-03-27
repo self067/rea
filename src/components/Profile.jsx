@@ -1,25 +1,28 @@
 import React, { Profiler } from 'react';
+import './Profile.css';
 
 function Profile() {
   return (
-    <div className="content">
-    <div>
-      <img src="https://www.look.com.ua/large/201512/141403.jpg" alt="pic"/>
-    </div>
-    <div>
-      <img alt="logo2" src="https://felomena.com/wp-content/images/sonnik/bukva/k/kot.jpg" />
-    </div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div className="profile">
+      My Posts
+      <div>
+        New post
+      </div>
+      <div className="posts">
+        <div className='item'>
+          post 1
+        </div>
+        <div className='item'>
+          post 2
+        </div>
+      </div>
+ 
+
+    
   </div>
 
 );
   }
 
-  export default Profiler;
+  export default Profile;
 

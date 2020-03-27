@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
@@ -11,6 +11,7 @@ function App() {
       <Header/>
       <Nav/>
       <Content/>
+      
     </div>
   );
 }
