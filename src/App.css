@@ -29,10 +29,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App {
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+.app-wrapper {
+  margin: 0 auto;
   display: grid;
-
   
   grid-template-areas:
   "head head"
@@ -41,3 +41,14 @@
   grid-template-columns: 2fr 10fr;
   /* gap: 10px; */
 }
+
+.app-wrapper-content {
+  
+    grid-area: cont;
+    background-color: #71c4c7;
+  }
+  
+  /* .content img {
+    width: auto;
+    max-height: 30vh;
+  } */

@@ -16,8 +16,8 @@ function MyPosts() {
         
       </div>
       <div className={s.posts}>
-      <Post/>
-      <Post/>
+      <Post message='HI'/>
+      <Post message="It's my "/>
       <Post/>
       </div>
      
