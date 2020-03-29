@@ -2,7 +2,7 @@
   color: brown;
 }
 
-.profile img {
-  width: 50px;
+ .profile img {
+  width: auto;    
+  height: 50px;
 }
-

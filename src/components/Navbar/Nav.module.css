@@ -2,13 +2,18 @@
 .nav {
   grid-area: nav;
   background-color: #d61afb;
+  padding: 20px;
 }
 
-.item {
+.item a{
   color: white;
+  text-decoration: none;
 }
 
-.item .active {
+a.active {
   color: yellow;
+}
 
+.item a:hover {
+  color: aqua;
 }

@@ -2,16 +2,15 @@ import React from 'react';
 import s from './Post.module.css';
 
 
-function Post(props) {
+const Post = (props) => {
   console.log(props);
-  return (
+  return ( 
     <div className={s.item}>
       <img src="https://avatars.mds.yandex.net/get-pdb/770122/200f9305-aa1c-442b-af09-227346adaedf/s1200" alt="" srcset=""/>
       post 1
       <div><span>Like</span></div>
     </div>
-
-);
+  );
   }
 
   export default Post;
