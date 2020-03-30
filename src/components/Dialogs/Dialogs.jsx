@@ -16,6 +16,13 @@ const Dialogs = (props) => {
       <div className={s.dialogs}>
         <div className={s.dialogsItems}>
           <DialogItem name="Dimych" id="1"/>
+
+
+
+
+
+
+
           <div className={`${s.dialog} ${s.active}`}>
             <NavLink to="/dialogs/1"></NavLink>
           </div>
