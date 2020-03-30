@@ -16,25 +16,11 @@ const Dialogs = (props) => {
       <div className={s.dialogs}>
         <div className={s.dialogsItems}>
           <DialogItem name="Dimych" id="1"/>
+          <DialogItem name="Roma" id="2"/>
+          <DialogItem name="Sveta" id="3"/>
+          <DialogItem name="Sergey" id="4"/>
+          <DialogItem name="Andry" id="5"/>
 
-
-
-
-
-
-
-          <div className={`${s.dialog} ${s.active}`}>
-            <NavLink to="/dialogs/1"></NavLink>
-          </div>
-          <div className={s.dialog}>
-            <NavLink to="/dialogs/2">Homa</NavLink>
-          </div>
-          <div className={s.dialog}>
-            <NavLink to="/dialogs/3">Sergey</NavLink></div>
-          <div className={s.dialog}>
-            <NavLink to="/dialogs/4">Andrey</NavLink></div>
-          <div className={s.dialog}>
-            <NavLink to="/dialogs/5">Vovan</NavLink></div>
         </div>
         <div className={s.messages}>
           <div className={s.message}>rferf</div>
