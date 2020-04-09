@@ -5,10 +5,11 @@
 
 .dialogsItems {
   padding: 10px;
+  color: white;
 }
 
 .dialogsItems .active {
-  color: darkblue;
+  color: gold;
 }
 
 .dialogsItems a{
@@ -28,6 +29,6 @@ a.active {
   padding: 10px;
 }
 
-.message {
-  
+.messages .message {
+  color: white;
 }
