@@ -3,16 +3,9 @@ import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 
-const MyPosts = () => {
-  let posts = [
-    { id: 1, likes: 3, post: "gjh sjdf ggggggggg"},
-    { id: 2, likes: 5, post: "gjh sjdf ggggggggg"},
-    { id: 3, likes: 1, post: "gsdfvsvsjdf ggggj"},
-    { id: 4, likes: 30, post: "gsfvrtnjh sjdf ggg"},
-    { id: 5, likes: 13, post: "ryngrynrjh sjdf gg"}
-    ];
+const MyPosts = (props) => {
 
-  let postsElements = posts.map( p => <Post message={p.post} likeCount={p.likes} id={p.id}/>);
+  let postsElements = props.posts.map( p => <Post message={p.post} likeCount={p.likes} id={p.id}/>);
 
 
   return (
@@ -32,9 +25,8 @@ const MyPosts = () => {
      
   </div>
 
+  );
+}
 
-);
-  }
-
-  export default MyPosts;
+export default MyPosts;
 
