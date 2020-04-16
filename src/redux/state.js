@@ -1,4 +1,5 @@
 let store = {
+
   _state: {
 
     profilePage: {
@@ -36,30 +37,50 @@ let store = {
 
   _callSubscriber() {},
 
-
   getState() { return this._state;},
+  subscribe(observer) { this._callSubscriber = observer; },
 
-  addPost() {
-    const newPost = {
-      id: 6,
-      post: this._state.profilePage.newPostText,
-      likes: 0
-    };
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newPostText = '';
-    this._callSubscriber(this._state);
-  },
+  // addPost() {
+  //   const newPost = {
+  //     id: 6,
+  //     post: this._state.profilePage.newPostText,
+  //     likes: 0
+  //   };
+  //   this._state.profilePage.posts.push(newPost);
+  //   this._state.profilePage.newPostText = '';
+  //   this._callSubscriber(this._state);
+  // },
 
-  updateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText;
-    this._callSubscriber(this._state);
-  },
+  // updateNewPostText(newText) {
+  //   this._state.profilePage.newPostText = newText;
+  //   this._callSubscriber(this._state);
+  // },
 
-  subscribe(observer) {
-    this._callSubscriber = observer;
+  dispatch(action) { // type: 'ADD-POST'
+    switch (action.type) {
+    case 'ADD-POST':
+      const newPost = {
+        id: 6,
+        post: this._state.profilePage.newPostText,
+        likes: 0
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newPostText = '';
+      this._callSubscriber(this._state);
+      break;
+    case 'UPDATE-NEW-POST-TEXT':
+      this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+      break;
+
+    default: break;
+
+
+    }
   }
+
 
 }
 
 export default store;
-window.store = store;
+//window.store = store;
