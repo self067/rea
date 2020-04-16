@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import state, { subscribe,addPost,updateNewPostText } from './redux/state';
+import store from './redux/state';
 // import {rerenderEntireTree} from './render';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
@@ -10,8 +10,8 @@ export const rerenderEntireTree = (state) => {
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App state={state} addPost={addPost} 
-      updateNewPostText={updateNewPostText}/>
+      <App state={state} addPost={ store.addPost.bind(store)} 
+      updateNewPostText={store.updateNewPostText.bind(store)}/>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
@@ -19,8 +19,8 @@ ReactDOM.render(
 }
 
 
-subscribe(rerenderEntireTree);
-rerenderEntireTree(state);
+store.subscribe(rerenderEntireTree);
+rerenderEntireTree(store.getState());
 
 
 
