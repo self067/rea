@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import store from './redux/state';
+import store from './redux/redux-store';
 // import {rerenderEntireTree} from './render';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
@@ -18,7 +18,9 @@ ReactDOM.render(
 }
 
 
-store.subscribe(rerenderEntireTree);
+store.subscribe(() => {
+    rerenderEntireTree(store.getState());
+});
 rerenderEntireTree(store.getState());
 
 
