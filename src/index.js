@@ -19,10 +19,9 @@ export const rerenderEntireTree = () => {
   );
 }
 
-
-store.subscribe(() => {
-  rerenderEntireTree(store.getState());
-});
+// store.subscribe(() => {
+//   rerenderEntireTree(store.getState());
+// });
 rerenderEntireTree(store.getState());
 
 
