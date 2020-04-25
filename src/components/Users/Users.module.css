@@ -37,3 +37,7 @@ a.active {
   width: 100px;
   height: auto;
 }
+
+.selectedPage {
+  font-weight: bold;
+}
