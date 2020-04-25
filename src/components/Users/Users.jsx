@@ -6,7 +6,7 @@ import userPhoto from '../../assets/img/user.png';
 class Users extends React.Component{
   constructor(props) {
     super(props);
-    this.getUsers();
+    // this.getUsers();
 
   }
   getUsers = () => {
@@ -18,6 +18,10 @@ class Users extends React.Component{
         });
   }
 
+  componentDidMount() {
+    this.getUsers();
+
+  }
 
   render() {
     return <div>
